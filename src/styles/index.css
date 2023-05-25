@@ -1,0 +1,170 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+main {
+    width: 100%;
+    height: 50vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-brand-1);
+}
+
+aside {
+    width: 100%;
+    height: 50vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-grey-2);
+}
+
+.main__center {
+    width: 76%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aside__center {
+    width: 76%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main__center > h1 {
+    font-size: 2.25rem;
+    color: var(--color-grey-7)
+}
+
+.main__description {
+    font-size: 1.125rem;
+    line-height: 140%;
+    font-weight: 400;
+    color: var(--color-grey-7);
+}
+
+.aside__center > h2 {
+    font-size: 1.5rem;
+    line-height: 120%;
+    font-weight: 500;
+    color: var(--color-grey-7);
+}
+
+.aside__description {
+    font-size: 1.125rem;
+    line-height: 150%;
+    font-weight: 500;
+    color: var(--color-grey-7);
+
+    opacity: 70%;
+}
+
+input {
+    height: 38px;
+
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-grey-1);
+
+    padding-left: 10px;
+
+    color: var(--color-grey-7);
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Inter';
+}
+
+input:focus {
+    outline: 1px solid var(--color-brand-1);
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+button {
+    height: 38px;
+
+    background-color: var(--color-brand-1);
+
+    color: var(--color-grey-7);
+    font-size: 1.125rem;
+    font-weight: 400;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 5px 5px #520F84;
+    transition: 0.6s;
+}
+
+@media (min-width: 767px){
+
+    body{
+        flex-direction: row;
+    }
+    main {
+        height: 100vh;
+    }
+    
+    aside {
+        height: 100vh;
+    }
+    .main__center {
+        width: 300px;
+        
+        gap: 30px;
+    
+        height: 200px;
+    }
+    
+    .aside__center {
+        width: 300px;
+        
+        gap: 30px;
+    }
+}
+
+
+@media (min-width: 1023px){
+
+    .main__center {
+        width: 450px;
+    }
+
+    .aside__center {
+        width: 450px;
+    }
+
+    input {
+        height: 60px;
+
+        padding: 10px;
+    }
+
+    button {
+        height: 60px;
+
+        padding: 10px;
+    }
+}

@@ -1,0 +1,184 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5625rem;
+
+    background-color: var(--color-grey-2);
+
+    color: var(--color-grey-7)
+}
+
+header {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 40px;
+
+    max-width: 55rem;
+}
+
+header > div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header > div > img {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    border: 2px solid var(--color-brand-2);
+}
+
+header > div > h1 {
+    font-size: 1.125rem;
+}
+
+header > button {
+    height: 38px;
+    width: 130px;
+
+    color: var(--color-grey-7);
+    font-size: .875rem;
+
+    background-color: var(--color-grey-3);
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+header > button:hover {
+    border: 1px solid var(--color-grey-7);
+
+    transition: 0.6s;
+}
+
+main {
+    max-width: 55rem;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.cards__container {
+    width: 100%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cards {
+    width: 85%;
+    height: 30vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    
+    padding: 20px 10px;
+
+    border: 2px solid var(--color-grey-4);
+    border-radius: 8px;
+}
+
+.cards:hover {
+    border: 2px solid var(--color-grey-7);
+    transition: 0.6s;
+}
+
+.cards > h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.cards > p {
+    font-size: 1rem;
+    color: var(--color-grey-7);
+    opacity: 60%;
+    line-height: 130%;
+}
+
+.cards > button {
+    width: 6.0625rem;
+    height: 2.3125rem;
+
+    color: var(--color-grey-7);
+    font-size: 1rem;
+
+    border: 1px solid ;
+    border-radius: 4px;
+    background-color: var(--color-grey-2);
+
+    font-family: 'Inter';
+
+    cursor: pointer;
+}
+
+.cards > button:hover {
+    background-color: var(--color-brand-1);
+
+    border-color: transparent; 
+
+    transition: 0.6s;
+}
+
+.cards > button > a:visited {
+    color: var(--color-brand-2);
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+    
+        height: 100px;
+    
+        padding-top: 20px;
+    }
+    
+    header > div {
+        flex-direction: row;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    .cards {
+        height: 25vh;
+    }
+}
+
+@media (min-width: 1024px){
+
+    main {
+        width: 70%;
+        padding: 0;
+    }
+
+    .cards__container {        
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+    .cards {
+        width: 33%;
+    }
+}
